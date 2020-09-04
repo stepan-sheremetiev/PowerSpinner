@@ -317,6 +317,11 @@ class PowerSpinnerView : AppCompatTextView, LifecycleObserver {
         R.styleable.PowerSpinnerView_spinner_popup_height,
         this.spinnerPopupHeight
       )
+    this.spinnerPopupMargin =
+            a.getDimensionPixelSize(
+                    R.styleable.PowerSpinnerView_spinner_popup_margin,
+                    this.spinnerPopupMargin
+            )
     this.spinnerPopupElevation =
       a.getDimensionPixelSize(
         R.styleable.PowerSpinnerView_spinner_popup_elevation,
@@ -691,6 +696,10 @@ class PowerSpinnerView : AppCompatTextView, LifecycleObserver {
 
     fun setSpinnerPopupHeight(@Px value: Int) = apply {
       this.powerSpinnerView.spinnerPopupHeight = value
+    }
+
+    fun setSpinnerPopupMargin(@Px value: Int) = apply {
+      this.powerSpinnerView.spinnerPopupMargin = value
     }
 
     fun setPreferenceName(value: String) = apply {
