@@ -318,10 +318,10 @@ class PowerSpinnerView : AppCompatTextView, LifecycleObserver {
         this.spinnerPopupHeight
       )
     this.spinnerPopupMargin =
-            a.getDimensionPixelSize(
-                    R.styleable.PowerSpinnerView_spinner_popup_margin,
-                    this.spinnerPopupMargin
-            )
+      a.getDimensionPixelSize(
+        R.styleable.PowerSpinnerView_spinner_popup_margin,
+        this.spinnerPopupMargin
+      )
     this.spinnerPopupElevation =
       a.getDimensionPixelSize(
         R.styleable.PowerSpinnerView_spinner_popup_elevation,
@@ -533,7 +533,7 @@ class PowerSpinnerView : AppCompatTextView, LifecycleObserver {
           val spinnerHeight = if (spinnerPopupHeight != NO_INT_VALUE) {
             spinnerPopupHeight
           } else {
-            if(spinnerPopupMargin != NO_INT_VALUE) {
+            if (spinnerPopupMargin != NO_INT_VALUE) {
               this.binding.body.height - spinnerPopupMargin
             } else {
               this.binding.body.height
