@@ -182,6 +182,9 @@ class PowerSpinnerView : AppCompatTextView, LifecycleObserver {
   /** A height size of the spinner popup. */
   var spinnerPopupHeight: Int = NO_INT_VALUE
 
+  /** A margin bottom size of the spinner popup. */
+  var spinnerPopupMargin: Int = NO_INT_VALUE
+
   /** A preferences name of the spinner. */
   var preferenceName: String? = null
     set(value) {
@@ -525,7 +528,11 @@ class PowerSpinnerView : AppCompatTextView, LifecycleObserver {
           val spinnerHeight = if (spinnerPopupHeight != NO_INT_VALUE) {
             spinnerPopupHeight
           } else {
-            this.binding.body.height
+            if(spinnerPopupMargin != NO_INT_VALUE) {
+              this.binding.body.height - spinnerPopupMargin
+            } else {
+              this.binding.body.height
+            }
           }
           this.spinnerWindow.update(spinnerWidth, spinnerHeight)
         }

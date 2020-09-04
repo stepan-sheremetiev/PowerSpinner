@@ -152,6 +152,11 @@ class PowerSpinnerPreference @JvmOverloads constructor(
         R.styleable.PowerSpinnerView_spinner_popup_height,
         this.powerSpinnerView.spinnerPopupHeight
       )
+    this.powerSpinnerView.spinnerPopupMargin =
+            a.getDimensionPixelSize(
+                    R.styleable.PowerSpinnerView_spinner_popup_margin,
+                    this.powerSpinnerView.spinnerPopupMargin
+            )
     this.powerSpinnerView.spinnerPopupElevation =
       a.getDimensionPixelSize(
         R.styleable.PowerSpinnerView_spinner_popup_elevation,
