@@ -185,6 +185,9 @@ class PowerSpinnerView : AppCompatTextView, LifecycleObserver {
   /** A margin bottom size of the spinner popup. */
   var spinnerPopupMargin: Int = NO_INT_VALUE
 
+  /** A margin bottom size of the spinner popup. */
+  var topPaddingPopupItem: Int = 0
+
   /** A preferences name of the spinner. */
   var preferenceName: String? = null
     set(value) {
@@ -700,6 +703,10 @@ class PowerSpinnerView : AppCompatTextView, LifecycleObserver {
 
     fun setSpinnerPopupMargin(@Px value: Int) = apply {
       this.powerSpinnerView.spinnerPopupMargin = value
+    }
+
+    fun setSpinnerTopPaddingPopupItem(@Px value: Int) = apply {
+      this.powerSpinnerView.topPaddingPopupItem = value
     }
 
     fun setPreferenceName(value: String) = apply {

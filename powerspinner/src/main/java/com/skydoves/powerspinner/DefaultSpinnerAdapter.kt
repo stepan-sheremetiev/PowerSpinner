@@ -68,12 +68,21 @@ class DefaultSpinnerAdapter(
         setTextSize(TypedValue.COMPLEX_UNIT_PX, spinnerView.textSize)
         setTextColor(spinnerView.currentTextColor)
       }
-      binding.root.setPadding(
-        spinnerView.paddingLeft,
-        spinnerView.paddingTop,
-        spinnerView.paddingRight,
-        spinnerView.paddingBottom
-      )
+      if(spinnerView.topPaddingPopupItem != 0) {
+        binding.root.setPadding(
+                spinnerView.paddingLeft,
+                spinnerView.topPaddingPopupItem,
+                spinnerView.paddingRight,
+                spinnerView.topPaddingPopupItem
+        )
+      } else {
+        binding.root.setPadding(
+                spinnerView.paddingLeft,
+                spinnerView.paddingTop,
+                spinnerView.paddingRight,
+                spinnerView.paddingBottom
+        )
+      }
     }
   }
 }
