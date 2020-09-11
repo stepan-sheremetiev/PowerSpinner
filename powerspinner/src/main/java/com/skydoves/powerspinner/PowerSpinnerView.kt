@@ -529,6 +529,7 @@ class PowerSpinnerView : AppCompatTextView, LifecycleObserver {
         animateArrow(true)
         applyWindowAnimation()
         this.spinnerWindow.showAsDropDown(this)
+        updateSpinnerWindow()
         post {
           val spinnerWidth = if (spinnerPopupWidth != NO_INT_VALUE) {
             spinnerPopupWidth
